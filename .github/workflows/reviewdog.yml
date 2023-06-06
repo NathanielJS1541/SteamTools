@@ -1,6 +1,6 @@
 name: reviewdog
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   black:
@@ -25,6 +25,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          committer: Nathaniel Struselis <NathanielJS1541@users.noreply.github.com>
           title: "Format Python code with psf/black"
           commit-message: ":art: Format Python code with psf/black"
           body: |
