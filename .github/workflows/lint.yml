@@ -11,33 +11,33 @@ jobs:
         with:
           python_version: "3.11"
           black: true
-          root: "../"
+          root: ".."
           workdir: "steamtools"
       - name: Bandit
         uses: microsoft/action-python@0.7.0
         with:
           python_version: "3.11"
           bandit: true
-          root: "../"
+          root: ".."
           workdir: "steamtools"
       - name: Pylint
         uses: microsoft/action-python@0.7.0
         with:
           python_version: "3.11"
           pylint: true
-          root: "../"
+          root: ".."
           workdir: "steamtools"
       - name: Pyright
         uses: microsoft/action-python@0.7.0
         with:
           python_version: "3.11"
           pyright: true
-          root: "../"
+          root: ".."
           workdir: "steamtools"
       - name: Flake8
         uses: microsoft/action-python@0.7.0
         with:
           python_version: "3.11"
           flake8: true
-          root: "../"
+          root: ".."
           workdir: "steamtools"
