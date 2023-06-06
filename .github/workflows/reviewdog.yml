@@ -33,6 +33,11 @@ jobs:
             uses the [psf/black](https://github.com/psf/black) formatter to fix these issues.
           base: ${{ github.head_ref }}
           branch: actions/black
+          labels: |
+            Refactor
+            Black automated PR
+          assignees: NathanielJS1541
+          reviewers: NathanielJS1541
 
   pyright:
     name: Pyright
