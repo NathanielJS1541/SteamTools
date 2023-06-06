@@ -1,11 +1,6 @@
-name: Black format check
-
-runs-on: self-hosted
+name: "Black format check"
 
 on: [push, pull_request]
-  paths:
-    - '.github/workflows/black_format.yml'
-    - '**.py'
 
 jobs:
   black-format-check:
