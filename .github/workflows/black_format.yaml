@@ -1,7 +1,7 @@
 name: Black format check
 
 on:
-  [push, pull_request]:
+  pull_request:
     paths:
       - '.github/workflows/black_format.yml'
       - '**.py'
