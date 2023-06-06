@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "steamtools"
+version = "0.1.0"
+description = "A collection of TUI tools for accessing Steam data."
+authors = ["Nathaniel Struselis <Nathaniel.Struselis@hotmail.co.uk>", "Dominic Mason <dominicmason555@gmail.com>"]
+readme = "README.rst"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
