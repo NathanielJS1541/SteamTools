@@ -17,7 +17,7 @@ jobs:
         if: steps.action_black.outputs.is_formatted == 'true'
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.github_token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           title: "Format Python code with psf/black"
           commit-message: ":art: Format Python code with psf/black"
           body: |
@@ -33,6 +33,6 @@ jobs:
       - name: Run pyright with reviewdog
         uses: jordemort/action-pyright@v1
         with:
-          github_token: ${{ secrets.github_token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           lib: true
