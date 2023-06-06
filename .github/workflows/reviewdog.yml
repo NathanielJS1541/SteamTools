@@ -7,7 +7,14 @@ jobs:
     name: Black
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v5
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSWORD }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
       - name: Check files using black
         uses: rickstaa/action-black@v1
         id: action_black
@@ -15,7 +22,7 @@ jobs:
           black_args: "."
       - name: Create Pull Request
         if: steps.action_black.outputs.is_formatted == 'true'
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: "Format Python code with psf/black"
@@ -25,6 +32,7 @@ jobs:
             uses the [psf/black](https://github.com/psf/black) formatter to fix these issues.
           base: ${{ github.head_ref }}
           branch: actions/black
+
   pyright:
     name: Pyright
     runs-on: ubuntu-latest
