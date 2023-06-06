@@ -1,5 +1,7 @@
 name: Black format check
 
+runs-on: self-hosted
+
 on:
   pull_request:
     paths:
