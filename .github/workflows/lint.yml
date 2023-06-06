@@ -38,6 +38,6 @@ jobs:
         uses: microsoft/action-python@0.7.0
         with:
           python_version: "3.11"
-          flake8: false
+          flake8: true
           root: "."
           workdir: "steamtools"
