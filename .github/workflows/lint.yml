@@ -13,6 +13,7 @@ jobs:
           black: true
           root: "."
           workdir: "."
+          toml: "./pyproject.toml"
       - name: Bandit
         uses: microsoft/action-python@0.7.0
         with:
