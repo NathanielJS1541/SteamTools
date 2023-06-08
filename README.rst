@@ -1,5 +1,5 @@
 |Dependabot|
-.. |Dependabot| image:: "https://flat.badgen.net/dependabot/thepracticaldev/dev.to?icon=dependabot"
+.. |Dependabot| image:: "https://flat.badgen.net/badge/icon/dependabot?icon=dependabot"
 
 ==========
 SteamTools
