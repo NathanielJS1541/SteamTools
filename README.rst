@@ -1,5 +1,5 @@
-|Dependabot|
-.. |Dependabot| image:: "https://flat.badgen.net/badge/icon/dependabot?icon=dependabot"
+.. |Dependabot| image:: "https://flat.badgen.net/github/dependabot/NathanielJS1541/SteamTools"
+   :target:
 
 ==========
 SteamTools
