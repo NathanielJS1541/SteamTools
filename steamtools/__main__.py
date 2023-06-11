@@ -1,6 +1,8 @@
-from steamtools.tui import dashboard
+# Import the main SteamTools application.
+from steamtools.tui import application
 
 
 if __name__ == "__main__":
-    tui = dashboard.Dashboard()
+    # Run the main SteamTools application.
+    tui = application.SteamTools()
     tui.run()
