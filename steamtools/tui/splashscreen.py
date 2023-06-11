@@ -27,4 +27,5 @@ class IntroPopup(Container):
         self.app.add_note("[b magenta]Start!")
         self.app.query_one(".location-first").scroll_visible(duration=0.5, top=True)
 
+
 # -------------------------------------------------------------------------------------------------

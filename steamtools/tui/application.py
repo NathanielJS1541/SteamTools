@@ -47,13 +47,16 @@ class SteamTools(App[None]):
         yield Container(
             # The header is displayed at the top, and contains the title and a clock.
             Header(show_clock=True),
-
             # The dashboard body contains the main elements of the TUI.
             dashboard.Body(
                 # The SplashScreen is displayed when the app is first opened.
-                splashscreen.SplashScreen(splashscreen.IntroPopup(), classes="location-splash"),
+                splashscreen.SplashScreen(
+                    splashscreen.IntroPopup(), classes="location-splash"
+                ),
                 # The QuickAccess container is used to easily navigate from screen to screen.
-                dashboard.QuickAccess(dashboard.LocationLink("Dashboard", ".location-dashboard")),
+                dashboard.QuickAccess(
+                    dashboard.LocationLink("Dashboard", ".location-dashboard")
+                ),
                 # The changing portion of the TUI is stored in a column.
                 dashboard.Column(
                     # This section stores the content for the dashboard.
@@ -68,13 +71,10 @@ class SteamTools(App[None]):
                     classes="location-dashboard location-first",
                 ),
             ),
-
             # The Sidebar is part of the hidden class by default.
             dashboard.Sidebar(classes="-hidden"),
-
             # Textlog watches the hidden classes and displays text in a scrolling panel.
             TextLog(classes="-hidden", wrap=False, highlight=True, markup=True),
-
         )
         # The footer displays the keybindings and allows a user to enter the keybindings with their mouse.
         yield Footer()

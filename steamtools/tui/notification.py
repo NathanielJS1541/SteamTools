@@ -18,10 +18,12 @@ class PopUp(Static):
 
     Displays for 3 seconds.
     """
+
     def on_mount(self) -> None:
         self.set_timer(POPUP_DURATION, self.remove)
 
     def on_click(self) -> None:
         self.remove()
+
 
 # -------------------------------------------------------------------------------------------------
