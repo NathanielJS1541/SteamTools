@@ -1,2 +1,6 @@
+from steamtools.tui import dashboard
+
+
 if __name__ == "__main__":
-    print("Hello World")
+    tui = dashboard.Dashboard()
+    tui.run()

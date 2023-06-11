@@ -1,0 +1,35 @@
+/* The screen is defined here as a vertical layout */
+Screen {
+  layout: vertical;
+}
+
+/* Specify that the header should dock to the top of the screen */
+Header {
+  dock: top;
+}
+
+/* Define a horizontal spacer for separating elements on a horizontal layout */
+.horizontal-spacer {
+  width: 0.1fr;
+}
+
+/* -------------------------------------------------- API Key Entry ------------------------------------------------- */
+
+/* Define the text style for the howto comment for obtaining an API key. */
+#api-howto-label {
+  width: 1.5fr;
+  text-align: justify;
+  link-color: black 90%;
+  link-background: dodgerblue;
+  link-style: bold italic underline;
+}
+
+/* Define the input box for the API key */
+#api-key-input {
+  width: 2fr;
+}
+
+/* Define the button which will be used to start a test of the API Key */
+#api-test-button {
+  width: 0.5fr;
+}
