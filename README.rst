@@ -18,10 +18,10 @@ I recommend `pipx`_ as it installs applications in isolated environments,
 so you won't end up causing dependency conflicts, and each application can
 have dependencies of different versions of the same library.
 
-.. role:: Bash(code)
+.. role:: bash(code)
    :language: bash
 
-.. role:: PowerShell(code)
+.. role:: powershell(code)
     :language: PowerShell
 
 ---------------
@@ -31,17 +31,17 @@ For more information and troubleshooting, please see `pipx`_.
 
 - On Linux:
 
-  1. :Bash:`python3 -m pip install --user pipx`
-  2. :Bash:`python3 -m pipx ensurepath`
+  1. :bash:`python3 -m pip install --user pipx`
+  2. :bash:`python3 -m pipx ensurepath`
 
 - On Windows:
-  (Replace :PowerShell:`python` with :PowerShell:`python3` if you got Python
+  (Replace :powershell:`python` with :powershell:`python3` if you got Python
   from the Microsoft Store)
 
-  1. :PowerShell:`python -m pip install --user pipx`
-  2. Navigate to :PowerShell:`C:\<USER>\AppData\Roaming\Python\Python3x\Scripts`
+  1. :powershell:`python -m pip install --user pipx`
+  2. Navigate to :powershell:`C:\<USER>\AppData\Roaming\Python\Python3x\Scripts`
      in a Terminal. This assumes you didn't install Python with a package manager.
-  3. :PowerShell:`.\pipx ensurepath`
+  3. :powershell:`.\pipx ensurepath`
 
 - On MacOS:
 
