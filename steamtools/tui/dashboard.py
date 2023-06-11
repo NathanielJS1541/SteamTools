@@ -1,5 +1,11 @@
 from textual.app import App, ComposeResult
-from textual.containers import Container, Horizontal, HorizontalScroll, Vertical, VerticalScroll
+from textual.containers import (
+    Container,
+    Horizontal,
+    HorizontalScroll,
+    Vertical,
+    VerticalScroll,
+)
 from textual.reactive import reactive
 from textual.widgets import Header, Footer, Label, Input, Button, Static
 import webbrowser
@@ -27,14 +33,19 @@ class Dashboard(App):
 
         # Horizontal group to display the label, input and button all on the same row.
         yield Horizontal(
-            Label(STEAM_API_EXPLANATION, id="api-howto-label"),      # Label to explain how to get a Steam API key.
-            Input(placeholder="Steam API Key", id="api-key-input"),  # Input box for pasting the API key.
-            Static(classes="horizontal-spacer"),                     # Spacer for the button.
-            Button(STEAM_API_TEST_BUTTON, id="api-test-button"),     # Button to test whether the API key is valid.
-            Static(classes="horizontal-spacer"),                     # Spacer for the button.
+            # Label to explain how to get a Steam API key.
+            Label(STEAM_API_EXPLANATION, id="api-howto-label"),
+            # Input box for pasting the API key.
+            Input(placeholder="Steam API Key", id="api-key-input"),
+            # Spacer for the button.
+            Static(classes="horizontal-spacer"),
+            # Button to test whether the API key is valid.
+            Button(STEAM_API_TEST_BUTTON, id="api-test-button"),
+            # Spacer for the button.
+            Static(classes="horizontal-spacer"),
         )
 
     # Action defining how clicking on a web URL should be handled
     def action_open_link(self, link: str) -> None:
-        self.app.bell()        # Play the bell sound
+        self.app.bell()  # Play the bell sound
         webbrowser.open(link)  # Open the link in the default browser
