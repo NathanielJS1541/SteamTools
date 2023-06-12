@@ -12,8 +12,8 @@ jobs:
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v5
         with:
-          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-          passphrase: ${{ secrets.GPG_PASSWORD }}
+          gpg_private_key: ${{ secrets.ENV_GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.ENV_GPG_PASSWORD }}
           git_user_signingkey: true
           git_commit_gpgsign: true
       - name: Check files using black
