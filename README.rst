@@ -74,9 +74,9 @@ To write the config manually, see below.
 2. Create the file `~/.config/steamtools/config.toml`.
 3. Add in the contents of the example config below, and change them as necessary.
 
--------------------
-Example config.toml
--------------------
+---------------------
+Example `config.toml`
+---------------------
 
 .. code:: TOML
 
