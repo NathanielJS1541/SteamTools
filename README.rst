@@ -43,7 +43,7 @@ For more information and troubleshooting, please see `pipx`_.
      in a Terminal. This assumes you didn't install Python with a package manager.
   3. :powershell:`.\pipx ensurepath`
 
-- On MacOS:
+- On macOS:
 
   1. :bash:`brew install pipx`
   2. :bash:`pipx ensurepath`
@@ -62,6 +62,35 @@ Running SteamTools
 2. Navigate to the repo root in a terminal: :bash:`cd SteamTools`
 3. Initialise `poetry`_: :bash:`poetry install`
 4. Run the application: (Replace with :bash:`python3` if necessary) :bash:`poetry run python -m steamtools`
+
+======================
+Configuring SteamTools
+======================
+You can create a config file for SteamTools to use in a TOML file manually, or through the TUI.
+To write the config from the TUI, press the "Config" button from the dashboard.
+To write the config manually, see below.
+
+1. Create the directory `~/.config/steamtools/`. This is consistent across all platforms.
+2. Create the file `~/.config/steamtools/config.toml`.
+3. Add in the contents of the example config below, and change them as necessary.
+
+-------------------
+Example config.toml
+-------------------
+
+.. code:: TOML
+
+  # This section contains details about your user account.
+  # This file can optionally be generated from the TUI.
+  [account]
+  # The API key for your steam account.
+  # To get one, see https://steamcommunity.com/dev/apikey
+  api = "API Key"
+  # Your steam username (From your community URL).
+  # For example, https://steamcommunity.com/id/username1
+  username = "username1"
+  # The user ID linked with your steam account.
+  userid = "1234567"
 
 .. _ValvePython/steam: https://github.com/ValvePython/steam
 
