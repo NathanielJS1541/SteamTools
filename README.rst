@@ -70,13 +70,13 @@ You can create a config file for SteamTools to use in a TOML file manually, or t
 To write the config from the TUI, press the "Config" button from the dashboard.
 To write the config manually, see below.
 
-1. Create the directory `~/.config/steamtools/`. This is consistent across all platforms.
-2. Create the file `~/.config/steamtools/config.toml`.
+1. Create the directory :code:`~/.config/steamtools/`. This is consistent across all platforms.
+2. Create the file :code:`~/.config/steamtools/config.toml`.
 3. Add in the contents of the example config below, and change them as necessary.
 
----------------------
-Example `config.toml`
----------------------
+---------------------------
+Example :code:`config.toml`
+---------------------------
 
 .. code:: TOML
 
