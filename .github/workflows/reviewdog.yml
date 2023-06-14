@@ -6,16 +6,24 @@ jobs:
   black:
     name: Black
     runs-on: ubuntu-latest
-    environment: black
     steps:
       - uses: actions/checkout@v3
       - name: Import GPG key
+        if: github.event.pull_request.head.repo.fork == false
         uses: crazy-max/ghaction-import-gpg@v5
         with:
-          gpg_private_key: ${{ secrets.ENV_GPG_PRIVATE_KEY }}
-          passphrase: ${{ secrets.ENV_GPG_PASSWORD }}
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSWORD }}
           git_user_signingkey: true
           git_commit_gpgsign: true
+      - name: Setup committer
+        run: |
+          if ${{ github.event.pull_request.head.repo.fork }}
+          then
+            echo "COMMITTER=GitHub <noreply@github.com>" >> $GITHUB_ENV
+          else
+            echo "COMMITTER=${{ secrets.COMMITTER }}" >> $GITHUB_ENV
+          fi
       - name: Check files using black
         uses: rickstaa/action-black@v1
         id: action_black
@@ -26,7 +34,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          committer: Nathaniel Struselis <NathanielJS1541@users.noreply.github.com>
+          committer: $MY_VARIABLE
           title: "Format Python code with psf/black"
           commit-message: ":art: Format Python code with psf/black"
           body: |
