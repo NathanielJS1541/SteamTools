@@ -11,7 +11,7 @@ python = "^3.11"
 [tool.poetry.group.dev.dependencies]
 black = "^23.7.0"
 bandit = "^1.7.5"
-pylint = "^2.17.5"
+pylint = "^2.17.6"
 pyright = "^1.1.324"
 flake8 = "^6.1.0"
 
