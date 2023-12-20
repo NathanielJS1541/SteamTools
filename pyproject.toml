@@ -12,7 +12,7 @@ python = "^3.11"
 black = "^23.9.1"
 bandit = "^1.7.5"
 pylint = "^3.0.1"
-pyright = "^1.1.331"
+pyright = "^1.1.342"
 flake8 = "^6.1.0"
 
 [build-system]
